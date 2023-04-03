@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8548CC0129DB5A5E004131C7 /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8548CC0029DB5A5E004131C7 /* ToDoItem.swift */; };
+		8548CC0329DB5EC6004131C7 /* Db.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 8548CC0229DB5EC6004131C7 /* Db.sqlite */; };
 		85D82EE629DB57430075075B /* ToDoListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D82EE529DB57430075075B /* ToDoListApp.swift */; };
 		85D82EE829DB57430075075B /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D82EE729DB57430075075B /* ListView.swift */; };
 		85D82EEA29DB574A0075075B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85D82EE929DB574A0075075B /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 
 /* Begin PBXFileReference section */
 		8548CC0029DB5A5E004131C7 /* ToDoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItem.swift; sourceTree = "<group>"; };
+		8548CC0229DB5EC6004131C7 /* Db.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Db.sqlite; sourceTree = "<group>"; };
 		85D82EE229DB57430075075B /* ToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85D82EE529DB57430075075B /* ToDoListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListApp.swift; sourceTree = "<group>"; };
 		85D82EE729DB57430075075B /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
@@ -46,6 +48,7 @@
 		8548CBFF29DB5A40004131C7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8548CC0229DB5EC6004131C7 /* Db.sqlite */,
 				8548CC0029DB5A5E004131C7 /* ToDoItem.swift */,
 			);
 			path = Model;
@@ -146,6 +149,7 @@
 			files = (
 				85D82EED29DB574A0075075B /* Preview Assets.xcassets in Resources */,
 				85D82EEA29DB574A0075075B /* Assets.xcassets in Resources */,
+				8548CC0329DB5EC6004131C7 /* Db.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
