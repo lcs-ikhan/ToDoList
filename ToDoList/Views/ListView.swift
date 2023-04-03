@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ListView: View {
     var body: some View {
-       
+        
         NavigationView {
             
             VStack {
@@ -28,13 +28,24 @@ struct ListView: View {
                 }
                 .padding(20)
                 
-                List{
+                List(existingToDoItems) { currentItem in
+                    
+                    Label(title: {
+                        Text(currentItem.description)
+                    }, icon: {
+                        if currentItem.completed == true {
+                            Image(systemName : "checkmark.circle")
+                        } else {
+                            Image(systemName: "circle")
+                        }
+                    })
                     
                 }
             }
+            .navigationTitle("To do")
         }
-            Text("Hello, world!")
-        }
+        
+    }
 }
 
 struct ListView_Previews: PreviewProvider {

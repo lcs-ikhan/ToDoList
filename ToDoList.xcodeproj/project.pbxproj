@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8548CC0129DB5A5E004131C7 /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8548CC0029DB5A5E004131C7 /* ToDoItem.swift */; };
 		85D82EE629DB57430075075B /* ToDoListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D82EE529DB57430075075B /* ToDoListApp.swift */; };
 		85D82EE829DB57430075075B /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D82EE729DB57430075075B /* ListView.swift */; };
 		85D82EEA29DB574A0075075B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85D82EE929DB574A0075075B /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8548CC0029DB5A5E004131C7 /* ToDoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItem.swift; sourceTree = "<group>"; };
 		85D82EE229DB57430075075B /* ToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85D82EE529DB57430075075B /* ToDoListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListApp.swift; sourceTree = "<group>"; };
 		85D82EE729DB57430075075B /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
@@ -36,8 +38,17 @@
 			isa = PBXGroup;
 			children = (
 				85D82EE729DB57430075075B /* ListView.swift */,
+				8548CBFF29DB5A40004131C7 /* Model */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		8548CBFF29DB5A40004131C7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8548CC0029DB5A5E004131C7 /* ToDoItem.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		85D82ED929DB57430075075B = {
@@ -147,6 +158,7 @@
 			files = (
 				85D82EE829DB57430075075B /* ListView.swift in Sources */,
 				85D82EE629DB57430075075B /* ToDoListApp.swift in Sources */,
+				8548CC0129DB5A5E004131C7 /* ToDoItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
