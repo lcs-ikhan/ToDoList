@@ -10,6 +10,29 @@ import SwiftUI
 struct ListView: View {
     var body: some View {
        
+        NavigationView {
+            
+            VStack {
+                
+                HStack {
+                    
+                    TextField("Enter a to-do item", text: Binding.constant(""))
+                    
+                    Button(action: {
+                        
+                    }, label: {
+                        Text("ADD")
+                            .font(.caption)
+                    })
+                    
+                }
+                .padding(20)
+                
+                List{
+                    
+                }
+            }
+        }
             Text("Hello, world!")
         }
 }
