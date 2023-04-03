@@ -8,6 +8,15 @@
 import SwiftUI
 
 struct ListView: View {
+    // MARK: Stored properties
+    
+    // The list of items to be completed
+    @State var todoItems: [TodoItem] = existingToDoItems
+    
+    // The item currently being added
+    @State var newItemDescription: String = ""
+    
+    // MARK: Computed properties
     var body: some View {
         
         NavigationView {
@@ -16,10 +25,25 @@ struct ListView: View {
                 
                 HStack {
                     
-                    TextField("Enter a to-do item", text: Binding.constant(""))
+                    TextField("Enter a to-do item", text: $newItemDescription)
                     
                     Button(action: {
+                        // Get last todo item id
+                        let lastId = todoItems.last!.id
                         
+                        // Create new todo item id
+                        let newId = lastId + 1
+                        
+                        //Create the new todo item
+                        let newTodoItem = TodoItem(id: newId,
+                                                   description:newItemDescription,
+                                                   completed: false)
+                        
+                    // Add the new to-do item to the list
+                        todoItems.append(newTodoItem)
+                        
+                    // Clear the input field
+                    newItemDescription = ""
                     }, label: {
                         Text("ADD")
                             .font(.caption)
@@ -28,7 +52,7 @@ struct ListView: View {
                 }
                 .padding(20)
                 
-                List(existingToDoItems) { currentItem in
+                List(todoItems) { currentItem in
                     
                     Label(title: {
                         Text(currentItem.description)
