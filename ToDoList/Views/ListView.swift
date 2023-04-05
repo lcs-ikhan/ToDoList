@@ -33,10 +33,10 @@ struct ListView: View {
                 HStack {
                     
                     TextField("Enter a to-do item", text: $newItemDescription)
-
+                    
                     Button(action: {
                         Task{
-                        // Write to database
+                            // Write to database
                             try await db!.transaction { core in
                                 try core.query("INSERT INTO TodoItem (description VALUES (?)", newItemDescription)
                             }
@@ -52,7 +52,7 @@ struct ListView: View {
                 }
                 .padding(20)
                 
-            List(todoItems.results) { currentItem in
+                List(todoItems.results) { currentItem in
                     
                     Label(title: {
                         Text(currentItem.description)
@@ -63,17 +63,29 @@ struct ListView: View {
                             Image(systemName: "circle")
                         }
                     })
-                    
+                    .onTapGesture{
+                        Task{
+                            try await db!.transaction { core in
+                                // Change the status for this person to the opposite of its current value
+                                try core.query("UPDATE TodoItem Set completed = (?) WHERE id = (?)",
+                                               !currentItem.completed,
+                                               currentItem.id)
+                                
+                            }
+                            
+                        }
+                    }
                 }
+                .navigationTitle("To do")
             }
-            .navigationTitle("To do")
+            
         }
-        
     }
 }
+    
+    struct ListView_Previews: PreviewProvider {
+        static var previews: some View {
+            ListView()
+        }
+    }
 
-struct ListView_Previews: PreviewProvider {
-    static var previews: some View {
-        ListView()
-    }
-}
