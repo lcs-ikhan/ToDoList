@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		85068BA529DF09B500B49D5C /* db.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 85068BA429DF09B500B49D5C /* db.sqlite */; };
 		8548CC0129DB5A5E004131C7 /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8548CC0029DB5A5E004131C7 /* ToDoItem.swift */; };
-		8548CC0329DB5EC6004131C7 /* Db.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 8548CC0229DB5EC6004131C7 /* Db.sqlite */; };
 		8548CC0629DB5F74004131C7 /* Blackbird in Frameworks */ = {isa = PBXBuildFile; productRef = 8548CC0529DB5F74004131C7 /* Blackbird */; };
 		8548CC0929DB600F004131C7 /* AppDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8548CC0829DB600F004131C7 /* AppDatabase.swift */; };
 		85D82EE629DB57430075075B /* ToDoListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D82EE529DB57430075075B /* ToDoListApp.swift */; };
@@ -18,8 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		85068BA429DF09B500B49D5C /* db.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = db.sqlite; sourceTree = "<group>"; };
 		8548CC0029DB5A5E004131C7 /* ToDoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItem.swift; sourceTree = "<group>"; };
-		8548CC0229DB5EC6004131C7 /* Db.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Db.sqlite; sourceTree = "<group>"; };
 		8548CC0829DB600F004131C7 /* AppDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDatabase.swift; sourceTree = "<group>"; };
 		85D82EE229DB57430075075B /* ToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85D82EE529DB57430075075B /* ToDoListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListApp.swift; sourceTree = "<group>"; };
@@ -52,7 +52,7 @@
 		8548CBFF29DB5A40004131C7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				8548CC0229DB5EC6004131C7 /* Db.sqlite */,
+				85068BA429DF09B500B49D5C /* db.sqlite */,
 				8548CC0029DB5A5E004131C7 /* ToDoItem.swift */,
 				8548CC0729DB5FF0004131C7 /* Helpers */,
 			);
@@ -168,7 +168,7 @@
 			files = (
 				85D82EED29DB574A0075075B /* Preview Assets.xcassets in Resources */,
 				85D82EEA29DB574A0075075B /* Assets.xcassets in Resources */,
-				8548CC0329DB5EC6004131C7 /* Db.sqlite in Resources */,
+				85068BA529DF09B500B49D5C /* db.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +319,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -348,6 +349,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

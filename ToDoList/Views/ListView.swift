@@ -38,7 +38,7 @@ struct ListView: View {
                         Task{
                             // Write to database
                             try await db!.transaction { core in
-                                try core.query("INSERT INTO TodoItem (description VALUES (?)", newItemDescription)
+                                try core.query("INSERT INTO TodoItem (description) VALUES (?)", newItemDescription)
                             }
                             
                             // Clear the input field
@@ -83,9 +83,9 @@ struct ListView: View {
     }
 }
     
-    struct ListView_Previews: PreviewProvider {
-        static var previews: some View {
-            ListView()
-        }
+struct ListView_Previews: PreviewProvider {
+    static var previews: some View {
+        ListView()
     }
+}
 
