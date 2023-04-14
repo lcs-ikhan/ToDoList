@@ -77,12 +77,38 @@ struct ListView: View {
                             }
                         }
                     }
+                    .onDelete(perform: removeRows)
                 }
                 
                 .navigationTitle("To do")
             }
             
         }
+    }
+    
+    // MARK: Functions
+    func removeRows(at offsets: IndexSet) {
+        
+        Task{
+            
+            try await db!.transaction { core in
+                
+                // Get the ID of the item to be deleted
+                var idList = ""
+                for offset in offsets {
+                    idList += "\(todoItems.results[offset].id),"
+                }
+                
+                // Remove the final comma
+                print(idList)
+                idList.removeLast()
+                print(idList)
+                
+                // Delete the row(s) from the database
+                try core.query("DELETE FROM TodoItem WHERE id IN (?)", idList)
+            }
+        }
+        
     }
 }
     
