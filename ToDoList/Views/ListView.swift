@@ -51,6 +51,7 @@ struct ListView: View {
                 }
                 .padding(20)
                
+                ListItemsView(filteredOn: searchText)
                 .searchable(text: $searchText)
                 .navigationTitle("To do")
             }

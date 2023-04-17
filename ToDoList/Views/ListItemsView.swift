@@ -16,10 +16,7 @@ struct ListItemsView: View {
     @Environment(\.blackbirdDatabase) var db: Blackbird.Database?
     
     // The list of items to be completed
-    @BlackbirdLiveModels({ db in
-        try await TodoItem.read(from: db,
-    sqlWhere: "description LIKE ?", "%\(searchText)%")
-    }) var todoItems
+    @BlackbirdLiveModels var todoItems: Blackbird.LiveResults<TodoItem>
     
     
     var body: some View {
@@ -53,6 +50,19 @@ struct ListItemsView: View {
         }
     }
     
+    
+    // MARK: Initializer(s)
+    init(filteredOn searchText: String) {
+        
+        
+        // Initialize the live model
+        _todoItems = BlackbirdLiveModels({ db in
+            try await TodoItem.read(from: db,
+        sqlWhere: "description LIKE ?", "%\(searchText)%")
+        })
+        
+    }
+    
     func removeRows(at offsets: IndexSet) {
         
         Task{
@@ -80,6 +90,8 @@ struct ListItemsView: View {
 
 struct ListItemsView_Previews: PreviewProvider {
     static var previews: some View {
-        ListItemsView()
+        ListItemsView(filteredOn: "testing")
+        // Make the database available to all other views through the environment
+            .environment(\.blackbirdDatabase, AppDatabase.instance)
     }
 }
