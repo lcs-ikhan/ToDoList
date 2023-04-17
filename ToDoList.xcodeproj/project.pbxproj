@@ -44,7 +44,6 @@
 			isa = PBXGroup;
 			children = (
 				85D82EE729DB57430075075B /* ListView.swift */,
-				8548CBFF29DB5A40004131C7 /* Model */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -54,7 +53,6 @@
 			children = (
 				85068BA429DF09B500B49D5C /* db.sqlite */,
 				8548CC0029DB5A5E004131C7 /* ToDoItem.swift */,
-				8548CC0729DB5FF0004131C7 /* Helpers */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -87,6 +85,8 @@
 			isa = PBXGroup;
 			children = (
 				85D82EE529DB57430075075B /* ToDoListApp.swift */,
+				8548CC0729DB5FF0004131C7 /* Helpers */,
+				8548CBFF29DB5A40004131C7 /* Model */,
 				8548CBFE29DB58AF004131C7 /* Views */,
 				85D82EE929DB574A0075075B /* Assets.xcassets */,
 				85D82EEB29DB574A0075075B /* Preview Content */,

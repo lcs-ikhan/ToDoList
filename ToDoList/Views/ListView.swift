@@ -23,6 +23,9 @@ struct ListView: View {
     // The item currently being added
     @State var newItemDescription: String = ""
     
+    
+    // The current search text
+    @State var searchText = ""
     // MARK: Computed properties
     var body: some View {
         
@@ -79,7 +82,7 @@ struct ListView: View {
                     }
                     .onDelete(perform: removeRows)
                 }
-                
+                .searchable(text: $searchText)
                 .navigationTitle("To do")
             }
             
@@ -100,10 +103,10 @@ struct ListView: View {
                 }
                 
                 // Remove the final comma
-                print(idList)
+                print("Before removing comma: \(idList)")
                 idList.removeLast()
-                print(idList)
-                
+                print("After removing comma: \(idList)")
+
                 // Delete the row(s) from the database
                 try core.query("DELETE FROM TodoItem WHERE id IN (?)", idList)
             }
