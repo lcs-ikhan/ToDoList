@@ -17,7 +17,8 @@ struct ListView: View {
     
     // The list of items to be completed
     @BlackbirdLiveModels({ db in
-        try await TodoItem.read(from: db)
+        try await TodoItem.read(from: db,
+    sqlWhere: "description LIKE ?", "%\(searchText)%")
     }) var todoItems
     
     // The item currently being added
